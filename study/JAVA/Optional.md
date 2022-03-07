@@ -1,5 +1,5 @@
 # Optional이란?
-> T 타입 객체의 래퍼클래스 - Optional<?>
+> T 타입 객체의 래퍼클래스 - Optional\<T>
                  
 ### 래퍼클래스란?
 > 8개의 기본 타입에 해당하는 데이터를 객체로 표현하기 위해 포장해주는 클래스
@@ -13,7 +13,7 @@
 > - null 체크를 해주어야 한다.
 >   * if문이 필수 -> 코드가 지저분해진다.
   
-### Optional<?> 객체 생성하기
+### Optional\<T> 객체 생성하기
 ```java
 String str = "abc";
 Optional<String> opt = Optional.of(str);
@@ -30,7 +30,7 @@ Optional<String> opt = null; // 널로 초기화 가능, 바람직하지 않음
 Optional<String> opt2 = Optional.empty(); // 빈 객체로 초기화
 ```
 
-### Optional<?> 객체의 값 가져오기   
+### Optional\<T> 객체의 값 가져오기   
 ```java
 Optional<String> opt = Optional.of("abc");
 String str1 = opt.get(); // opt에 저장된 값을 반환, null 이면 예외발생

@@ -50,7 +50,41 @@ if(Optional.ofNullable(str).isPresent()){ // if(str != null)
 Optional.ofNallable(str).ifPresent(System.out::println); // 람다식 사용가능
 ```
 
-#### 예제는 다음 게시글에서 작성해 보겠습니다.
+### 예제
+```java
+    @Test
+    @DisplayName("Optional 예제")
+    void optional_예제(){
+        Optional<String> optStr = Optional.of("abcde"); 
+        Optional<Integer> optInt = optStr.map(String::length); 
+        System.out.println("optStr.get() = " + optStr.get());
+        System.out.println("optInt.get() = " + optInt.get());
+
+        int result1 = Optional.of("123")
+                .filter(x -> x.length() > 0)
+                .map(Integer::parseInt).get();
+
+        int result2 = Optional.of("")
+                .filter(x -> x.length() > 0)
+                .map(Integer::parseInt).orElse(-1);
+        System.out.println("result1 = " + result1);
+        System.out.println("result2 = " + result2);
+
+        Optional.of("456").map(Integer::parseInt).ifPresent(x -> System.out.printf("result3=%d%n",x));
+
+        OptionalInt optInt1 = OptionalInt.of(0); // 0 저장
+        OptionalInt optInt2 = OptionalInt.empty(); // 빈 객체를 저장
+
+        System.out.println("optInt1 = " + optInt1.isPresent());
+        System.out.println("optInt1 = " + optInt2.isPresent());
+
+        System.out.println("optInt1.getAsInt() = " + optInt1.getAsInt());
+        System.out.println("optInt2 = " + optInt2.getAsInt());
+    }
+```
+
+
+
 >참조링크
 >[자바의 정석-기초편(남궁성)] : (https://www.youtube.com/watch?v=W_kPjiTF9RI)
 

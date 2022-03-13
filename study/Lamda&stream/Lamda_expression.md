@@ -9,6 +9,7 @@
 ```java
 int[] arr = new int[5];
 Arrays.parallelSetAll(arr,(i) -> (int)Math.random()*5+1);
+
 //(i) -> (int)Math.random()*5+1 이 부분이 람다식!! 아래 메서드와 동일한 역할을 한다.
 public int method() {
 	return (int) Math.random()*5 + 1;
@@ -27,21 +28,83 @@ public int method() {
 반환타입 메서드이름(매개변수 선언){
   문장들
 }  
-  =>
+=>
   
   (매개변수 선언) -> {}
 
 ```
 예시
+> - 반환값이 있는 메서드의 경우, return 문 대신 식으로 대신할 수 있다. 식의 연산결과가 자동으로 반환값이 된다.
+> 이때는 문장이 아닌 식이므로 끝에 ; 를 붙히지 않는다. 
+> - 람다식에 선언된 매개변수의 타입은 추론이 가능한 경우는 생략할 수 있는데, 대부분의 경우에 생략이 가능하다.
+> 람다식에 반환타입이 없는 이유도 항상 추론이 가능하기 때문이다.
 ```java
+int max(int a, int b) {
+	return a > b? a : b;
+}
+=>
+(a,b) -> a > b? a: b
+```
+
+아래와 같이 선언된 매개변수가 하나뿐인 경우에는 괄호()를 생략할 수 있다.
+단, 매개변수의 타입이 있으면 괄호()를 생략할 수 없다.
+```java
+(a) 0 -> a * a      =>      a -> a * a //OK
+(int a) -> a * a    =>      int a -> a * a //에러
+```
+
+마찬가지로 괄호{} 안의 문장이 하나일 경우 괄호{}를 생략할 수 있다. 이 때 문장의 끝에는 ';'을
+붙이지 않아야 한다는 것을 주의하자.
+```java
+(String name, int i ) -> {System.out.println(name + "=" + i);}
+=>
+(String name, int i) -> System.out.println(name + "=" + i)
+```
+* 그러나 괄호{} 안의 문장이 return 문일 경우 괄호 {}를 생략할 수 없다.
+```java
+(int a, int b) -> { return a > b ? a : b;} // ok
+(int a, int b) ->  return a > b ? a : b // error
+```
+예제
+```java
+int max(int a, int b){ return a > b ? a : b;}
+=>
+(a,b) -> a > b ? a : b
+
+void printVar(String name, int i){
+	System.out.println(name + "=" + i);
+}
+=>
+(name, i) -> System.out.println(name + "=" + i)
+
+int square(int x){
+	return x * x;
+}
+=>
+x -> x * x
+
+int roll(){ return (int) (Math.random() * 6);}
+=>
+() -> (int) (Math.random() * 6)
+
+int sumArr(int[] arr){
+	int sum = 0;
+	for(int i : arr)
+		sum+=i;
+	return sum;
+}
+=>
+(int[] arr) -> {
+	int sum = 0;
+	for(int i : arr)
+		sum+=i;
+	return sum;
+} 
 
 ```
 
 
-
-
-
-
+출처 : Java의 정석 (3rd Edition) 남궁 성 지음
 
 
 

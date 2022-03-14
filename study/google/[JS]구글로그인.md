@@ -1,6 +1,6 @@
 # [JS] 구글로그인 API 구현하기
 ### 선행조건
-> [cloud.google.com/cloud-console/](cloud.google.com/cloud-console/) 에 접속하여 새 프로젝트를 만들고 인증정보 설정하기
+> [https://console.cloud.google.com](https://console.cloud.google.com) 에 접속하여 새 프로젝트를 만들고 인증정보 설정하기
 
 
 html 파일

@@ -35,4 +35,4 @@ SSO 문제해결
 
 참고: Google Workspace 지원팀에서는 타사 IdP를 사용하는 SSO 구현 지원을 제공하지 않습니다.
 
-[출처](https://support.google.com/a/answer/60224?hl=ko&ref_topic=7556907&visit_id=637828408725114193-2460389288&rd=1) https://support.google.com/a/answer/60224?hl=ko&ref_topic=7556907&visit_id=637828408725114193-2460389288&rd=1
+[출처][https://support.google.com/a/answer/60224?hl=ko&ref_topic=7556907&visit_id=637828408725114193-2460389288&rd=1](https://support.google.com/a/answer/60224?hl=ko&ref_topic=7556907&visit_id=637828408725114193-2460389288&rd=1)

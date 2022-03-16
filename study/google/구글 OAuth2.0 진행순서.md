@@ -22,6 +22,6 @@ Resource Server : 구글
 
 
 
-
+[출처] : [생활코딩 AOuth2.0](https://opentutorials.org/course/3405)
 
 

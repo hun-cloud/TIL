@@ -24,7 +24,6 @@ public class K번째수 {
         public int[] solution(int[] array, int[][] commands) {
             //int[] answer = {};
             List<Integer> result = new ArrayList<>();
-            //List<Integer> temp = Arrays.stream(array).boxed().collect(Collectors.toList());
             List<Integer> temp = new ArrayList<>();
             int a, b, c, d;
             for (int i = 0; i < commands.length; i++) {
@@ -45,6 +44,15 @@ public class K번째수 {
     }
 }
 
+```
+
+### int 배열을 list로
+```java
+Arrays.stream(array).boxed().collect(Collectors.toList());
+```
+### list를 int 배열로
+```java
+list.steram().mapToInt(i -> i).toArray();
 ```
 
 

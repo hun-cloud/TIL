@@ -5,5 +5,6 @@
 3. taskkill /f /pid pid번호
 #### 내 방법
 1. netstat -aon | findStr "8080
-2. taskkill /f /pid pid번호
-훨씬 빠르고 편하다👍👍👍👍
+2. taskkill /f /pid pid번호   
+
+### 훨씬 빠르고 편하다👍👍👍👍

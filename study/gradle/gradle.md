@@ -8,4 +8,13 @@
 >삭제된 네 명령은 각각 implementation, runtimeOnly, testImplementation, testRuntimeOnly 으로 대체되었다.
 
 
+> compile -> implementation   
+> runtime -> runtimeOnly   
+> testCompile -> testImplementation   
+> testRuntime -> testRuntimeOnly   
+ 
+
+
+
+
 [참조] [https://velog.io/@g0709-19/Gradle-Could-not-find-method-compile-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95](https://velog.io/@g0709-19/Gradle-Could-not-find-method-compile-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95)

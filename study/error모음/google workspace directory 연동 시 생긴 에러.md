@@ -22,6 +22,22 @@ public class AdminApplication {
 	}
 ```
 
+----> 리눅스 실 서버에 올리니 에러가 떴다...
+```
+org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: Could not initialize class sun.awt.X11.XToolkit
+```
+---> 일단 이렇게 수정
+```java
+	public static void main(String[] args) {
+		//SpringApplication.run(SiteAdminApplication.class, args);
+		// 구글 연동 시 창이 안뜨는 이슈로  인해 headless false 로 변경
+		SpringApplicationBuilder builder = new SpringApplicationBuilder(SiteAdminApplication.class);
+		builder.headless(false); //.run(args);
+		System.setProperty("java.awt.headless", "true");
+		ConfigurableApplicationContext context = builder.run(args);
+		
+	}
+```
 ### 원인
 Spring Boot 구동원리 공부 후에 올리도록 하겠다.   
 java.awt.HeadlessException -> 관련 검색어

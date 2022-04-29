@@ -24,7 +24,8 @@ public class AdminApplication {
 
 ----> 리눅스 실 서버에 올리니 에러가 떴다...
 ```
-org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoClassDefFoundError: Could not initialize class sun.awt.X11.XToolkit
+org.springframework.web.util.NestedServletException: Handler dispatch failed;    
+nested exception is java.lang.NoClassDefFoundError: Could not initialize class sun.awt.X11.XToolkit
 ```
 ---> 일단 이렇게 수정
 ```java

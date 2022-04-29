@@ -39,8 +39,10 @@ nested exception is java.lang.NoClassDefFoundError: Could not initialize class s
 		
 	}
 ```
-### 원인
-Spring Boot 구동원리 공부 후에 올리도록 하겠다.   
+---> 결국 벡딘에서 구글로그인 창을 띄우는 것은 포기하였다. 
+
+### 원인 예상
+
 java.awt.HeadlessException -> 관련 검색어
 
 
